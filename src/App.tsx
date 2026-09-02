@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from '@/context/AuthContext';
 import { Navbar } from '@/components/Navbar';
 import { AuthModal } from '@/components/AuthModal';
@@ -55,6 +56,7 @@ function App() {
   return (
     <AuthProvider>
       <AppContent />
+      <Analytics />
     </AuthProvider>
   );
 }
